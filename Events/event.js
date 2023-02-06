@@ -17,14 +17,53 @@ console.log("<----------DOM events------------->");
 ## onsubmit
 
 */
+let userInput = document.querySelector("[name = 'userNmae']");
+let ageInput = document.querySelector("[name = 'age']");
 
-let myParent = document.getElementById("parent");
+document.links[0].onclick = function (test) {
+  console.log(test);
+  test.preventDefault();
+};
 
-myParent.onmouseenter  = function () {
-  console.log("hallo welt");
+document.forms[0].onsubmit = function (e) {
+
+  let userValid = false;
+  let ageValid = false;
+
+
+  if(userInput.value !== "" &&  userInput.value.length <= 10){
+    userValid = true;
+  };
+
+  if(ageInput.value !== ""){
+    ageValid = true;
+  }
+
+
+  if (userValid === false || ageValid === false) {
+    e.preventDefault(); // stopt der absender
+  }
 };
 
 
-window.onscroll = function (){
-    console.log("scroll")
-}
+
+
+
+
+
+let btns = document.getElementById("btn");
+onscroll = function () {
+  if (scrollY > 80) {
+    btns.style.display = "block";
+  } else {
+    btns.style.display = "none";
+  }
+};
+
+btns.onclick = function () {
+  scroll({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
+  });
+};

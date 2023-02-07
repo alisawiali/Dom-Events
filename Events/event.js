@@ -17,11 +17,14 @@ console.log("<----------DOM events------------->");
 ## onsubmit
 
 */
-let userInput = document.querySelector("[name = 'userNmae']");
+
+
+
+
+let userInput = document.querySelector("[name = 'userName']");
 let ageInput = document.querySelector("[name = 'age']");
 
 document.links[0].onclick = function (test) {
-  console.log(test);
   test.preventDefault();
 };
 
@@ -29,6 +32,7 @@ document.forms[0].onsubmit = function (e) {
 
   let userValid = false;
   let ageValid = false;
+
 
 
   if(userInput.value !== "" &&  userInput.value.length <= 10){
@@ -45,16 +49,12 @@ document.forms[0].onsubmit = function (e) {
   }
 };
 
-
-
-
-
-
-
+// scroll ----------------------------------------------->
 let btns = document.getElementById("btn");
 onscroll = function () {
-  if (scrollY > 80) {
+  if (scrollY >= 400) {
     btns.style.display = "block";
+    btns.style.background = "bisque";
   } else {
     btns.style.display = "none";
   }
@@ -65,5 +65,6 @@ btns.onclick = function () {
     left: 0,
     top: 0,
     behavior: "smooth",
+
   });
 };

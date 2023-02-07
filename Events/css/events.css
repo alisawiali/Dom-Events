@@ -1,90 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
-    height: 1000px;
-    width: 1000px;
+    height: 2000px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
-#btn{
+
+form {
+    width: 80%;
+    border-radius: 5px;
+    background-color: bisque;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    height: 85vh;
+    text-transform: capitalize;
+}
+
+input,  textarea{
+    width: 100%;
+    padding: 0.4rem;
+    margin: 1rem 0;
+    border: 1px solid rgb(47, 47, 47);
+}
+#first{
+    border: none;
+    outline: 0.1em solid rgb(61, 59, 61);
+}
+#btn {
     width: 20px;
     height: 20px;
     background-color: #f02;
     position: fixed;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     bottom: 20px;
     right: 30px;
     display: none;
     border-radius: 50%;
 
 }
+textarea{
+    padding: 0 25px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#text{
+    width: 100%;
+}
 
 #checkbox{
+    display: flex;
+    justify-content: center;
+   
+}
+
+#sub {
+    margin: 0 auto;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(242, 213, 179);
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+#sub:hover{
+    background-color: #eff1ee;
+}
+
+/*------------- checkbox ------------- */
+
+#checkbox{
+    padding-top: 2rem;
+}
+
+
+
+input#loggen{
+    display: none;
+    }
+    h4{
+        margin-right: 1rem;
+    }
+    
+    label[for="loggen"]{
+        display: inline-block;
+        background-color: rgb(200, 155, 93);
+        border-radius: 15px;
+        width: 40px;
+        height: 20px;
+        position: relative;
+        margin-bottom: 2rem;
+      
+    }
+    /* label[for="loggen"]:hover{
+    
+    } */
+    label[for="loggen"]::before{
+        display: inline-block;
+        content: "";
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+    }
+    
+
+    input#loggen:checked + label::before {
+        position: absolute;
+        left: 25px;
+        background-color:#fff;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+#checkbox {
     margin-top: 3rem;
 }
+
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: 50px;
     height: 34px;
-  }
-  
-  
-  
-  .slider {
+}
+
+
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
+
     bottom: 0;
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
-    width: 26px;
+    width: 20px;
     left: 4px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider {
+    background-color: #008afb;
+}
+
+
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
+}
+
+/* Rounded sliders */
+/* .slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+} */ 

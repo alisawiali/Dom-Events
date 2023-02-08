@@ -49,7 +49,21 @@ document.forms[0].onsubmit = function (e) {
   }
 };
 
-// scroll ----------------------------------------------->
+// scroll -------------------get und set Attribute---------------------------->
+
+// let mylinks = document.querySelector(".link");
+
+// console.log(mylinks.getAttribute("class"));
+// console.log(mylinks.getAttribute("href"));
+
+
+// console.log(mylinks.setAttribute("class","mein"));
+// mylinks.setAttribute("href","https://www.w3schools.com/");
+// console.log(mylinks.setAttribute("title","testTow"));
+// console.log(mylinks.setAttribute("id","idTow"));
+
+// ----------------------beispiel------------------------------------>
+
 let btns = document.getElementById("btn");
 onscroll = function () {
   if (scrollY >= 400) {
@@ -68,3 +82,5 @@ btns.onclick = function () {
 
   });
 };
+
+

@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navgation {
+    background-color: bisque;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    background-attachment: fixed;
+}
+
+.navgation h2 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.navgation ul {
+    display: flex;
+}
+
+.navgation nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+    background-color: coral;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .navgation {
+        /* display: inline-block; */
+        flex-direction: column;
+        background-color: darkgoldenrod;
+        width: 100%;
+    }
+
+    .navgation ul {
+        padding: 2rem;
+        margin-top: 1rem;
+        background-color: rgb(246, 223, 132);
+        border-radius: 10px;
+        flex-direction: column-reverse;
+        /* drht die zahl umgekehrt */
+        /* flex-direction:row-reverse; */
+        /* damit die auf eine zeile bleiben  */
+        /* flex-direction: warp;  */
+        /* flex-direction: war;  */
+        /* display: flex;
+        justify-content: flex-end; */
+        gap: 20px;
+    }
+
+    .navgation ul li {
+        background-color: chocolate;
+        /* margin: 1rem 1rem; */
+        font-size: 2rem;
+        border: 3px solid rgb(232, 230, 230);
+        border-radius: 20px;
+        padding: 0.8rem;
+    }
+    .navgation ul li:hover{
+        background-color: coral;
+    }
+
+
+    .navgation h2 {
+        text-transform: uppercase;
+        text-decoration: underline;
+
+    }
+}
+
+
+
+
+/* <-------------------Layout------header-----------------------> */
+
+
+
+
+.layout-container header,
+.layout-container footer {
+    height: 150px;
+    background-color: chocolate;
+    text-align: center;
+}
+
+#ola li{
+    width: 100px;
+    list-style-type: none;
+    display: inline-block;
+    background-color: brown;
+    padding: 0.2em;
+    border-radius: 5px;
+    color: #ffff;
+    margin-top: 1em;
+    font-size: 2rem;
+}
+ /*  <--------main-------> */
+.layout-container main {
+    height: 150px;
+    text-align: center;
+    overflow: scroll;
+    background-color: coral;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.layout-container main img{
+    width: 80%;
+}
+
+.layout-container main p{
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+/* <-----------aside----------> */
+.layout-container aside {
+    height: 250px;
+    background-color: rgb(250, 175, 148);
+    text-align: center;
+}
+
+
+
+/* <----------media------------------> */
+@media (min-width:800px) {
+    .layout-container {
+        display: flex;
+        flex-wrap:wrap;
+        /* verteilt wie serein nach einander */
+        gap: 5px;      
+    }
+    .layout-container header,
+    .layout-container footer {
+        flex: 100%;
+        /* 
+        flex:grow
+        flex-basis
+        flex-shrinck
+         */
+    }
+
+   
+    .layout-container footer{
+        order: 4;
+    } 
+  
+    .layout-container main {
+        flex: 1;   
+        order: 3;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+  
+    .layout-container main p{
+        width: 80%;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+    .layout-container main img{
+        width: 100%;
+    }
+
+
+    .layout-container aside {
+        flex: 3;
+        order: 2;
+    }
+
+
+    .layout-container header{
+        height: 100px;
+    }
+    
+}
+@media (max-width:800px){
+
+    #ola li{
+        width: 300px;
+        height: 20px;
+        list-style-type: none;
+        flex-direction: column;
+        background-color: rgb(152, 23, 23);
+        border-radius: 5px;
+        color: #ffff;
+        font-size: 1rem;
+    }
+}

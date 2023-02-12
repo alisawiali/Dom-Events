@@ -78,7 +78,8 @@ nav ul li {
         border-radius: 20px;
         padding: 0.8rem;
     }
-    .navgation ul li:hover{
+
+    .navgation ul li:hover {
         background-color: coral;
     }
 
@@ -105,7 +106,7 @@ nav ul li {
     text-align: center;
 }
 
-#ola li{
+#ola li {
     width: 100px;
     list-style-type: none;
     display: inline-block;
@@ -116,7 +117,8 @@ nav ul li {
     margin-top: 1em;
     font-size: 2rem;
 }
- /*  <--------main-------> */
+
+/*  <--------main-------> */
 .layout-container main {
     height: 150px;
     text-align: center;
@@ -125,21 +127,29 @@ nav ul li {
     flex-direction: column;
     padding: 1rem 0;
 }
-.layout-container main img{
+
+.layout-container main img {
     width: 80%;
 }
 
-.layout-container main p{
+.layout-container main p {
     font-size: 1.5rem;
     width: 80%;
     margin: 0 auto;
     padding: 1rem 0;
 }
+
 /* <-----------aside----------> */
 .layout-container aside {
     height: 250px;
     background-color: rgb(250, 175, 148);
     text-align: center;
+}
+
+.parent {
+    text-align: center;
+    height: 250px;
+    background-color: rgb(178, 89, 89);
 }
 
 
@@ -148,10 +158,11 @@ nav ul li {
 @media (min-width:800px) {
     .layout-container {
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         /* verteilt wie serein nach einander */
-        gap: 5px;      
+        gap: 5px;
     }
+
     .layout-container header,
     .layout-container footer {
         flex: 100%;
@@ -162,43 +173,54 @@ nav ul li {
          */
     }
 
-   
-    .layout-container footer{
+
+    .layout-container footer {
         order: 4;
-    } 
-  
+    }
+
     .layout-container main {
-        flex: 1;   
+        flex: 1;
         order: 3;
         padding: 0.5rem 1rem;
         font-size: 1rem;
     }
-  
-    .layout-container main p{
+
+    .layout-container main p {
         width: 80%;
         font-size: 1.1rem;
         margin: 0 auto;
         padding: 1rem 0;
     }
-    .layout-container main img{
+
+    .layout-container main img {
         width: 100%;
+        border-radius: 5px;
     }
 
 
     .layout-container aside {
         flex: 3;
-        order: 2;
+        order: 3;
     }
 
 
-    .layout-container header{
+    .layout-container header {
         height: 100px;
     }
-    
-}
-@media (max-width:800px){
 
-    #ola li{
+    .parent:nth-child(2) {
+        order: 3;
+    }
+
+    .parent {
+        flex: 1;
+    }
+
+}
+
+@media (max-width:800px) {
+
+    #ola li {
         width: 300px;
         height: 20px;
         list-style-type: none;
@@ -208,4 +230,305 @@ nav ul li {
         color: #ffff;
         font-size: 1rem;
     }
+
+
+    /*<---------- Flex-grow media--------> */
+    .flex-grow-container {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .flex-grow-container div:nth-child(1):hover {
+        background-color: rgb(242, 197, 197);
+    }
+
+    .flex-grow-container div:nth-child(2):hover {
+        color: #fff;
+        background-color: rgb(39, 39, 46);
+    }
+
+    .flex-grow-container div:nth-child(3):hover {
+        background-color: rgb(251, 249, 252);
+        color: #000;
+    }
+
+    /* <---------------Felx-grow media----------- */
+}
+
+
+
+
+
+
+
+/* <---------------Felx-grow----------- */
+
+.flex-grow-container {
+    display: flex;
+
+}
+
+
+.flex-grow-container div {
+    flex-basis: 100px;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.flex-grow-container div:nth-child(1) {
+    flex-grow: 4;
+    /* flex: 1; */
+    height: 100px;
+    background-color: crimson;
+}
+
+
+
+.flex-grow-container div:nth-child(2) {
+    flex-grow: 1;
+    /* flex: 1; */
+    height: 150px;
+    background-color: blue;
+}
+
+
+
+
+.flex-grow-container div:nth-child(3) {
+    flex-grow: 3;
+    /* flex: 1; */
+    height: 200px;
+    background-color: blueviolet;
+    word-break: break-all;
+    /*werden die wörte zusammen gedrükt   */
+    overflow: scroll;
+}
+
+
+/* <----------------------parent-test--------------------------> */
+
+#Parent {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#Parent div {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+
+#Parent div:nth-child(1) {
+    background-color: blue;
+    color: #fff;
+    height: 200px;
+
+}
+
+#Parent div:nth-child(2) {
+    background-color: red;
+    color: #fff;
+    height: 120px;
+
+}
+
+#Parent div:nth-child(3) {
+    background-color: green;
+    color: #fff;
+    height: 150px;
+
+
+}
+
+#Parent div:nth-child(4) {
+    background-color: gray;
+    color: #fff;
+    height: 300px;
+
+}
+
+#Parent div:nth-child(5) {
+    background-color: Purple;
+    color: #fff;
+    height: 100px;
+
+
+}
+
+@media (max-width:800px) {
+    #Parent {
+        flex-wrap: wrap-reverse;
+    }
+
+    #Parent div:nth-child(1) {
+        background-color: rgb(0, 0, 216);
+        color: #fff;
+        height: 100px;
+        flex-grow: 2;
+    }
+
+    #Parent div:nth-child(2) {
+        background-color: rgb(142, 0, 0);
+        color: #fff;
+        height: 100px;
+        flex-grow: 2;
+    }
+
+    #Parent div:nth-child(3) {
+        background-color: rgb(3, 167, 3);
+        color: #fff;
+        height: 100px;
+        flex-grow: 2;
+
+    }
+
+    #Parent div:nth-child(4) {
+        background-color: rgb(153, 149, 149);
+        color: #fff;
+        height: 100px;
+        flex-grow: 2;
+
+    }
+
+    #Parent div:nth-child(5) {
+        background-color: rgb(132, 0, 132);
+        color: #fff;
+        height: 100px;
+        flex: 100%;
+    }
+    #linkes ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+/* --------cards----------- */
+.cards {
+    max-width: 800px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.cards h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 2px 10px 10px #121212;
+}
+
+.cards .cards-container {
+    background-color: cornflowerblue;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    /* justify-content: space-between; */
+    /* justify-content: flex-start;
+    align-content: flex-start; */
+}
+
+.cards>div>div {
+    flex-basis: 150px;
+    height: 150px;
+    padding-top: 1rem;
+    text-transform: capitalize;
+    text-shadow: 2px 10px 10px #121212;
+}
+
+.cards .item-1 {
+    background-color: rgb(0, 255, 30);
+}
+
+.cards .item-2 {
+    background-color: rgb(0, 17, 255);
+}
+
+.cards .item-3 {
+    background-color: red;
+}
+
+.cards .item-4 {
+    background-color: rgb(244, 244, 244);
+}
+
+.cards .item-5 {
+    background-color: rgb(238, 0, 255);
+}
+
+
+
+
+
+
+
+
+
+
+/* <----------------main test----------------------------> */
+
+#main {
+    margin-top: auto;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #adadad;
+}
+
+#main div{
+    color: #ffff;
+    text-align: center;
+    flex-basis: 200px;
+    height: 200px;
+}
+#linkes ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    
+}
+#linkes ul li{
+    padding-left: 10px;
+    margin: 1rem 0;
+ 
+
+}
+#linkes ul li a{
+    text-decoration: none;
+   
+}
+
+#main #main-1 {
+    background-color: rgb(248, 97, 97);
+}
+
+#main #main-2 {
+    background-color: red;
+}
+
+#main #main-3 {
+    background-color: rgb(126, 75, 75);
+}
+
+#main #main-4 {
+    background-color: rgb(51, 43, 43);
+}
+
+#main #main-5 {
+    background-color: rgb(137, 133, 133);
+}
+
+#main #main-6 {
+    background-color: rgb(58, 11, 11);
+
 }

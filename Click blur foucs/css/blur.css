@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    background-color: rgb(116, 185, 254);
+}
+#main{
+
+    background-color: rgb(68, 125, 106);
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 6px;
+    line-height: 2;
+   flex-wrap: wrap;
+}

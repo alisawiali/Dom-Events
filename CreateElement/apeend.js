@@ -15,7 +15,7 @@
 // document.body.appendChild(mainElement);
 
 
-let myElement= document.createElement("div");
+let myElement = document.createElement("div");
 let myHeading = document.createElement("h2");
 let myPar = document.createElement("p");
 
@@ -39,3 +39,43 @@ document.body.appendChild(myElement)
 
 
 //---------------------------------------------------------->
+// document.links[0].onclick = function(e){
+//     e.preventDefault();
+// }
+//---------------------------------------------------------->
+
+let bot = document.getElementById("btn");
+let pp = document.getElementsByTagName("p")[0];
+
+
+bot.onmouseenter = function () {
+    pp.textContent = "hallo welt Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis sed doloribus fuga, libero provident quam? Ducimus voluptates consequatur voluptatibus quam. "
+}
+
+
+// myInput.onkeyup = function () {
+//     myNotig.textContent = this.value;
+//   };
+
+//--------------Validata Form And Prevent Default----------------->
+
+
+let myElementsss = document.getElementById("imad");
+let myInp = document.getElementById("omer");
+let myNot = document.getElementById("tog")
+
+
+
+
+    myInp.onfocus = function (){
+        myNot.textContent = "pleacs not forget your password"
+    }
+
+   myInp.onblur = function (){
+
+       if(myInp.value.length < 10){
+        myNot.textContent = "pleacs not forget your massge ebeio"
+       }
+    }
+
+
